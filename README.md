@@ -1,7 +1,7 @@
 Authorization App
 =================
 
-This app is a fake authentication layer for Data Food Consortium
+This app is a fake authentication layer for the [Data Food Consortium prototype](https://github.com/datafoodconsortium/dfc-prototype.github.io).
 
 What's inside ?
 ---------------
@@ -12,7 +12,7 @@ supporting the implicit grant flow.
 Requirements
 ------------
 
-This project needs [https://docs.docker.com/compose/](Docker Compose).
+This project needs [Docker Composer](https://docs.docker.com/compose/).
 
 How to use ?
 ------------
