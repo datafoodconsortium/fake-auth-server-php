@@ -12,7 +12,7 @@ supporting the implicit grant flow.
 Requirements
 ------------
 
-This project needs [Docker Composer](https://docs.docker.com/compose/).
+This project needs [Docker Compose](https://docs.docker.com/compose/).
 
 How to use ?
 ------------
