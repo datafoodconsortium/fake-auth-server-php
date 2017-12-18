@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Your authorization is required{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <style>
+#wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+#container { padding: 2em; }
+body { background-color: #eeeeee; margin: 0; }
+#top, #page { margin: 0; padding: 0.5em 0; }
+#top { background-color: #ffffff; }
+.content { width: 300px; margin: 0 auto; }
+.center { text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div id="top">
+            <div class="content center">
+                Sample short food supply chain
+            </div>
+        </div>
+        <div id="page">
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

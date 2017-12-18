@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+composer install
+
+bin/console doctrine:schema:update --force
+bin/console doctrine:fixtures:load
+bin/console server:run 0.0.0.0:8000
