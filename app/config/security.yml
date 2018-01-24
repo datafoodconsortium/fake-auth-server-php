@@ -29,6 +29,14 @@ security:
                 success_handler: AppBundle\Security\LogoutHandler
             logout_on_user_change: true
 
+        api:
+            pattern: ^/api/
+            fos_oauth: true
+            stateless: true
+
         main:
             anonymous: ~
             logout_on_user_change: true
+
+    access_control:
+        - { path: ^/api/, roles: [ IS_AUTHENTICATED_FULLY ] }
