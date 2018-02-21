@@ -37,6 +37,11 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        platform:
+            name: '%env(PLATFORM_NAME)%'
+            bgcolor: '%env(PLATFORM_BGCOLOR)%'
+            logo: '%env(PLATFORM_LOGO)%'
 
 # Doctrine Configuration
 doctrine:

@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
             $manager,
             $id = '38sng3yrrd4ww0kogsk8kc0sc0wkg44sg88wcggc8sk8ggw88c',
             $secret = '35orpg1kwegwcws8g4ogcogsks4c8ws4w8s80so80s0koc0w8w',
-            'Data Food Consortium prototype',
+            'Data Food Consortium Prototype',
             'http://datafoodconsortium.org/',
             'https://avatars1.githubusercontent.com/u/24959977?s=200&v=4',
             array(

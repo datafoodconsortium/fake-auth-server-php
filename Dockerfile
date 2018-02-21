@@ -1,6 +1,6 @@
 FROM php:7.2.0-fpm
 
-COPY config/php.ini /usr/local/etc/php/
+COPY docker/php/config/php.ini /usr/local/etc/php/
 
 # see https://github.com/docker-library/php/issues/307
 RUN curl -sS -o /tmp/icu.tar.gz -L http://download.icu-project.org/files/icu4c/60.1/icu4c-60_1-src.tgz && \
@@ -18,7 +18,13 @@ RUN docker-php-ext-enable opcache.so
 # install composer
 RUN apt-get update && \
     apt-get install -y git unzip
-COPY ./composer.phar /usr/local/bin/composer
+COPY docker/php/composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 
+COPY . /var/www
+
+EXPOSE 8000
+
 WORKDIR /var/www
+
+CMD /var/www/scripts/server
