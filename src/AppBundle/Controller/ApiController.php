@@ -21,4 +21,30 @@ class ApiController extends Controller
             'username' => $user->getUsername(),
         ]);
     }
+
+    /**
+     * @Route("/api/catalog", name="api_catalog")
+     */
+    public function catalogAction(Request $request)
+    {
+        return new JsonResponse([
+            'products' => [
+                [
+                    'type' => 'Tomate',
+                    'nature' => 'Tomate coeur de boeuf',
+                    'quantity' => 20,
+                ],
+                [
+                    'type' => 'Tomate',
+                    'nature' => 'Tomate marmande',
+                    'quantity' => 10,
+                ],
+                [
+                    'type' => 'Miel',
+                    'nature' => 'Miel de thym',
+                    'quantity' => 10,
+                ]
+            ],
+        ]);
+    }
 }
