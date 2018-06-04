@@ -28,21 +28,22 @@ class ApiController extends Controller
     public function catalogAction(Request $request)
     {
         return new JsonResponse([
+            'username' => $this->getUser()->getUsername(),
             'products' => [
                 [
                     'type' => 'Tomate',
                     'nature' => 'Tomate coeur de boeuf',
-                    'quantity' => 20,
+                    'quantity' => rand(10, 30),
                 ],
                 [
                     'type' => 'Tomate',
                     'nature' => 'Tomate marmande',
-                    'quantity' => 10,
+                    'quantity' => rand(5, 15),
                 ],
                 [
                     'type' => 'Miel',
                     'nature' => 'Miel de thym',
-                    'quantity' => 10,
+                    'quantity' => rand(5, 15),
                 ]
             ],
         ]);
