@@ -28,6 +28,7 @@ class ApiController extends Controller
     public function catalogAction(Request $request)
     {
         return new JsonResponse([
+            'username' => $this->getUser()->getUsername(),
             'products' => [
                 [
                     'type' => 'Tomate',
