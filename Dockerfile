@@ -3,7 +3,7 @@ FROM php:7.2.0-fpm
 COPY docker/php/config/php.ini /usr/local/etc/php/
 
 # see https://github.com/docker-library/php/issues/307
-RUN curl -sS -o /tmp/icu.tar.gz -L http://download.icu-project.org/files/icu4c/60.1/icu4c-60_1-src.tgz && \
+RUN curl -sS -o /tmp/icu.tar.gz -L https://github.com/unicode-org/icu/releases/download/release-60-1/icu4c-60_1-src.tgz && \
     tar -zxf /tmp/icu.tar.gz -C /tmp && \
     cd /tmp/icu/source && \
     ./configure --prefix=/usr/local && \
